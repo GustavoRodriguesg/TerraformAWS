@@ -68,6 +68,31 @@ terraform plan
 ```
 terraform apply
 ```
+* Exibe informações sobre o estado atual da infraestrutura, incluindo recursos gerados pelo Terraform. Você pode visualizar a saída de um plano ou o estado atual com este comando:
+```
+terraform show
+```
+* Verifica se a configuração do Terraform é válida. Ele não aplica as mudanças, apenas valida a sintaxe e a estrutura do código:
+```
+terraform validate
+```
+* Mostra as saídas definidas no seu arquivo de configuração. Isso é útil para visualizar informações importantes após a aplicação da infraestrutura, como endereços IP e URLs:
+```
+terraform output
+```
+* Remove todos os recursos gerenciados pelo Terraform no estado atual. Esse comando é útil para limpar a infraestrutura quando não for mais necessária:
+```
+terraform destroy
+```
+* Marca um recurso como "tainted", o que significa que ele será destruído e recriado na próxima aplicação. Isso é útil se você deseja forçar a recriação de um recurso específico sem modificar a configuração:
+```
+terraform taint <recurso>
+```
+* Remove a marcação de "tainted" de um recurso, o que significa que ele não será destruído e recriado na próxima aplicação:
+```
+terraform untaint <recurso>
+```
+
 
 
 ## Código
